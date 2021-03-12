@@ -1,0 +1,20 @@
+h1{
+    color: blue;
+    font-size: 25;
+    text-align: center;
+    background-color:gray;
+}
+
+p{
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+div {
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    font-family: 'Courier New', Courier, monospace;
+}
