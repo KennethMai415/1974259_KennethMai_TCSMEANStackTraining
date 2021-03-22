@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Listings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="cartManagement.js"></script>
+</head>
+<body onload="reloadShoppingItems()" style="text-align: center">
+    <div id="header" class="divy">Cart Management</div>
+    <div id="navBar">
+        <a id="checkOut" type="button" class="btn btn-warning" href="shoppingCart.html">Checkout</a>
+        <label id="cartSize">Cart Size: 0</label>
+    </div>
+    <div class="container-fluid" id="itemListings">
+
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <img src="speakers.jpeg" style="width:100%"/></br>
+                    <p>Speakers</p>
+                    <p>$84.99</p>
+                    <button id="speakers" type="button" class="btn btn-warning" data-itemName="speakers" data-itemPrice="84.99" onclick="addToCart(this.id)"/>Add to Cart</button>
+                </div>
+             </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <img src="monitor.jfif" style="width:100%"/></br>
+                    <p>Monitor</p>
+                    <p>$249.99</p>
+                    <button id="monitor" type="button" class="btn btn-warning" data-itemName="monitor" data-itemPrice="249.99" onclick="addToCart(this.id)"/>Add to Cart</button>
+                </div>
+             </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <img src="tv.jpg" style="width:100%"/></br>
+                    <p>TV</p>
+                    <p>449.99</p>
+                    <button id="Tv" type="button" class="btn btn-warning" data-itemName="Tv" data-itemPrice="449.99" onclick="addToCart(this.id)"/>Add to Cart</button>
+                </div>
+             </div>
+        </div>
+
+        <div class="container" style="text-align: center">
+            <div class="row">
+                <div class="container">
+                    <img src="mic.jfif" style="width:100%"/></br>
+                    <p>Microphone</p>
+                    <p>$44.99</p>
+                    <button id="mic" type="button" class="btn btn-warning" data-itemName="mic" data-itemPrice="44.99" onclick="addToCart(this.id)"/>Add to Cart</button>
+                </div>
+             </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <img src="headphones.jpeg" style="width:100%"/></br>
+                    <p>Headphones</p>
+                    <p>$129.99</p>
+                    <button id="headphones" type="button" class="btn btn-warning" data-itemName="headphones" data-itemPrice="129.99" onclick="addToCart(this.id)"/>Add to Cart</button>
+                </div>
+             </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <img src="alexa.jpg" style="width:100%"/></br>
+                    <p>Alexa</p>
+                    <p>$79.99</p>
+                    <button id="alexa" type="button" class="btn btn-warning" data-itemName="alexa" data-itemPrice="79.99" onclick="addToCart(this.id)"/>Add to Cart</button>
+                </div>
+             </div>
+        </div>
+
+    </div>
+</body>
+</html>
