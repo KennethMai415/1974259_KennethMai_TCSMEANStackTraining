@@ -1,0 +1,25 @@
+<div>
+    <div id="header">Login</div>
+
+    <div class="container">
+        <form [formGroup]="loginRef" (ngSubmit)="checkUser()">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Username: </span>
+                </div>
+                <input type="text" class="form-control" formControlName="user">
+            </div>
+    
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Password: </span>
+                </div>
+                <input type="text" class="form-control" formControlName="pass">
+            </div>
+    
+            <input type="submit" class="btn btn-primary" value="Log In"/>
+            <input type="button" class="btn btn-success" value="signup" (click)="goToSignup()"/>
+            <input type="reset" class="btn btn-danger" value="reset">
+        </form>
+    </div>
+</div>

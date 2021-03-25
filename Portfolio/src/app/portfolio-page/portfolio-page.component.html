@@ -1,0 +1,36 @@
+<div>
+    <div id="header">
+        <label>Welcome {{username}}</label>
+    </div>
+
+    <div class="container">
+        <form [formGroup]="contactRef">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Contact Name: </span>
+                </div>
+                <input type="text" class="form-control" formControlName="name" [value]="reset">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Phone Number: </span>
+                </div>
+                <input type="text" class="form-control" formControlName="phoneNumber" [value]="reset">
+            </div>
+
+            <input type="button" class="btn btn-primary" value="save" (click)="saveContact()"/>
+        </form>
+
+        <br/><table id="contactTable" class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div>
+    <div id="header">Sign Up</div>
+    <div class="container">
+        <form [formGroup]="loginRef">
+ 
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">First Name: </span>
+                </div>
+                <input type="text" class="form-control" formControlName="firstName">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Last Name: </span>
+                </div>
+                <input type="text" class="form-control" formControlName="lastName">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Username: </span>
+                </div>
+                <input type="text" class="form-control" formControlName="username">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Password: </span>
+                </div>
+                <input type="text" class="form-control" formControlName="password">
+            </div>
+
+            <input type="button" class="btn btn-primary" value="login" (click)="returnToLogin()"/>
+            <input type="button" class="btn btn-success" value="register" (click)="registerUser()"/>
+            <input type="reset"  class="btn btn-danger" value="reset"/>
+        </form>
+    </div>
+</div>
