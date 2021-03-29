@@ -1,0 +1,11 @@
+  
+#header {
+    height: 150px;
+    color: white;
+    background-color:#1e2b33;
+    font-size: 80px;
+    font-style: italic;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    padding: 20px 0px 30px 20px;
+}

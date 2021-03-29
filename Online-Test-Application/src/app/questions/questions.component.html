@@ -1,0 +1,51 @@
+<div>
+    <div id="header" class="divy">Online Test Application</div>
+    <div class="form-check" *ngFor="let question of questions">
+        <h4>{{question.Question}}</h4>
+
+        <input class="form-check-input" type="radio" name="radioBtn{{question.Id}}" id="radioA{{question.Id}}" #selectedAns1 (click)="inputAnswer(question.Id, 'A')">
+        <label class="form-check-label" for="radioA{{question.Id}}">
+            {{question.A}}
+        </label><br/>
+
+        <input class="form-check-input" type="radio" name="radioBtn{{question.Id}}" id="radioA{{question.Id}}" #selectedAns2 (click)="inputAnswer(question.Id, 'B')">
+        <label class="form-check-label" for="radioB{{question.Id}}">
+            {{question.B}}
+        </label><br/>
+
+        <input class="form-check-input" type="radio" name="radioBtn{{question.Id}}" id="radioA{{question.Id}}" #selectedAns3 (click)="inputAnswer(question.Id, 'C')">
+        <label class="form-check-label" for="radioC{{question.Id}}">
+            {{question.C}}
+        </label><br/>
+
+        <input class="form-check-input" type="radio" name="radioBtn{{question.Id}}" id="radioA{{question.Id}}" #selectedAns4 (click)="inputAnswer(question.Id, 'D')">
+        <label class="form-check-label" for="radioD{{question.Id}}">
+            {{question.D}}
+        </label><br/>
+    </div>
+
+    <!-- Results Modal Popup -->
+    <div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal" (click)="submitAnswers()" style="margin: 0% 50%">
+            Submit
+        </button>
+
+        <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="Results" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="Results">Results</h1>
+                    </div>
+                    <div class="modal-body" style="text-align:center" id="modal-popup">
+                        <h3>You have scored {{numCorrect}}/10 correct.</h3><hr/>
+                        <div id="questionAnsInfo" style="text-align:center"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="ResetResults()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
