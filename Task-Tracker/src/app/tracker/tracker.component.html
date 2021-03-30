@@ -1,0 +1,61 @@
+<div>
+
+    <div style="background-color: blue; height: 100px; padding: 60px 0px 0px 15px; margin-bottom: 20px;">
+        <h1 style="font-size:50px; color: white;">Add Task</h1>
+    </div>
+
+    <div style="margin-left: 15px;">
+        <form #taskRef="ngForm" (ngSubmit)="storeTask(taskRef.value)">
+            <mat-form-field>
+                <mat-label>Id</mat-label>
+                <input matInput type="text" name="id" ngModel />
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput type="text" name="name" ngModel />
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+                <mat-label>Task</mat-label>
+                <input matInput type="text" name="task" ngModel />
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+                <mat-label>Deadline</mat-label>
+                <input matInput type="text" name="deadline" ngModel />
+            </mat-form-field>
+            <br />
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+            <button mat-raised-button color="warn" type="reset">Reset</button>
+        </form>
+        <br />
+    </div>
+
+    <div style="margin-left: 15px;">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;"> 
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="task">
+                <th mat-header-cell *matHeaderCellDef> Task </th>
+                <td mat-cell *matCellDef="let element"> {{element.task}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="deadline">
+                <th mat-header-cell *matHeaderCellDef> Deadline </th>
+                <td mat-cell *matCellDef="let element"> {{element.deadline}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>
