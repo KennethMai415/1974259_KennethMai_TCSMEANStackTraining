@@ -17,15 +17,18 @@ class log {
             let logs = [];
             let logEntry = {"Created":logTimeCreated, "firstName":firstName, "lastName":lastName, "gender":gender, "email":email};
             let logsString = fs.readFileSync("logs.json").toString();
+            debugger;
 
             if(logsString != "") {
                 let logsParsed = JSON.parse(logsString);
+                debugger;
                 for(let log of logsParsed) {
                     logs.push(log);
                 }
             }
             logs.push(logEntry)
             let logString = JSON.stringify(logs);
+            debugger;
             fs.writeFileSync("logs.json", logString);
             console.log("----------------------");
         }
