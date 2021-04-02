@@ -23,16 +23,10 @@ class log {
                 for(let log of logsParsed) {
                     logs.push(log);
                 }
-                logs.push(logEntry);
-                let logsEntryString = JSON.stringify(logs);
-                debugger;
-                fs.writeFileSync("logs.json", logsEntryString);
-            } else {
-                logs.push(logEntry)
-                let logString = JSON.stringify(logs);
-                debugger;
-                fs.writeFileSync("logs.json", logString);
             }
+            logs.push(logEntry)
+            let logString = JSON.stringify(logs);
+            fs.writeFileSync("logs.json", logString);
             console.log("----------------------");
         }
     }
