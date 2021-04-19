@@ -14,21 +14,23 @@ class log {
             let time = date.getHours() + ":" + date.getMinutes();
             let logTimeCreated = date.getMonth() + "-" + date.getDate() + "-" + date.getFullYear() + " " + time;
 
-            let logs = [];
             let logEntry = {"Created":logTimeCreated, "firstName":firstName, "lastName":lastName, "gender":gender, "email":email};
-            let logsString = fs.readFileSync("logs.json").toString();
-            debugger;
+            let logsString = "";
+            let logsParsed = [];
+
+            try{
+                logsString = fs.readFileSync("logs.json").toString();
+            }
+            catch {
+                console.log("No file found currently.")
+            }
 
             if(logsString != "") {
-                let logsParsed = JSON.parse(logsString);
-                debugger;
-                for(let log of logsParsed) {
-                    logs.push(log);
-                }
+                logsParsed = JSON.parse(logsString);
             }
-            logs.push(logEntry)
-            let logString = JSON.stringify(logs);
-            debugger;
+            
+            logsParsed.push(logEntry);
+            let logString = JSON.stringify(logsParsed);
             fs.writeFileSync("logs.json", logString);
             console.log("----------------------");
         }
