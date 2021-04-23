@@ -15,7 +15,7 @@ pipeline {
         }
         stage("Test"){
             steps {
-                sh "node app.js"
+                sh "node Jenkin_Pipeline/app.js"
             }
         }
         stage("Release the version"){
